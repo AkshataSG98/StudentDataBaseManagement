@@ -1,0 +1,84 @@
+package com.jsp.StudentManagementSystem.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Student {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int studentId;
+	
+	private String studentName;
+	private String studentEmail;
+	private long studentPhno;
+	private String studentGrade;
+	private String studentPassword;
+	
+	
+	public String getStudentPassword() {
+		return studentPassword;
+	}
+	public void setStudentPassword(String studentPassword) {
+		this.studentPassword = studentPassword;
+	}
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	public String getStudentName() {
+		return studentName;
+	}
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+	public String getStudentEmail() {
+		return studentEmail;
+	}
+	public void setStudentEmail(String studentEmail) {
+		this.studentEmail = studentEmail;
+	}
+	public long getStudentPhno() {
+		return studentPhno;
+	}
+	public void setStudentPhno(long studentPhno) {
+		this.studentPhno = studentPhno;
+	}
+	public String getStudentGrade() {
+		return studentGrade;
+	}
+	public void setStudentGrade(String studentGrade) {
+		this.studentGrade = studentGrade;
+	}
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentEmail=" + studentEmail
+				+ ", studentPhno=" + studentPhno + ", studentGrade=" + studentGrade + ", studentPassword="
+				+ studentPassword + "]";
+	}
+	
+	
+}
+
+
+//Auto-> hibernate will consern to create 
+//-> database follows single sequence
+//-> int value as primary key
+
+//Idnetity-> sql
+//-> Each table will be having its own sequence
+//-> int value as primary key
+
+//Sequence-> here String cana be used as primary key 
+
+
+
+
+
+
+
+
