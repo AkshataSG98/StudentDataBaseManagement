@@ -1,0 +1,57 @@
+package com.jsp.StudentManagementSystem.dto;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+ 
+
+public class StudentRequest {
+	
+	@NotNull(message = "Student Name Can not be null")
+	private String studentName;
+//	@NotNull(message = "Student email can not be null ")
+	@Email(regexp ="[a-zA-Z0-9+_.-]+@[g][m][a][i][l]+.[c][o][m]", 
+			message = "invalid email--Should be in the extension of '@gmail.com' ")
+	
+	private String studentEmail;
+	@Min(value = 6000000000l, message = "Phone Number cannot start below `6`!!")
+	@Max(value = 9999999999l, message = "Phone Number cannot be above `9999999999`!!")
+	private long studentPhno;
+	private String studentGrade;
+	private String studentPassword;
+	
+	public String getStudentPassword() {
+		return studentPassword;
+	}
+	public void setStudentPassword(String studentPassword) {
+		this.studentPassword = studentPassword;
+	}
+	public String getStudentName() {
+		return studentName;
+	}
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+	public String getStudentEmail() {
+		return studentEmail;
+	}
+	public void setStudentEmail(String studentEmail) {
+		this.studentEmail = studentEmail;
+	}
+	public long getStudentPhno() {
+		return studentPhno;
+	}
+	public void setStudentPhno(long studentPhno) {
+		this.studentPhno = studentPhno;
+	}
+	public String getStudentGrade() {
+		return studentGrade;
+	}
+	public void setStudentGrade(String studentGrade) {
+		this.studentGrade = studentGrade;
+	}
+	
+	
+
+}
