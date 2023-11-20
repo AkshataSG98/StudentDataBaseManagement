@@ -1,0 +1,42 @@
+package com.jsp.StudentManagementSystem.dto;
+
+public class MessageData {
+	
+	private String[] to;
+	private String subject;
+	private String text;
+	private String sendName;
+	private String sendAddress;
+	public String[] getTo() {
+		return to;
+	}
+	public void setTo(String[] to) {
+		this.to = to;
+	}
+	public String getSubject() {
+		return subject;
+	}
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	public String getText() {
+		return text;
+	}
+	public void setText(String text) {
+		this.text = text;
+	}
+	public String getSendName() {
+		return sendName;
+	}
+	public void setSendName(String sendName) {
+		this.sendName = sendName;
+	}
+	public String getSendAddress() {
+		return sendAddress;
+	}
+	public void setSendAddress(String sendAddress) {
+		this.sendAddress = sendAddress;
+	}
+	
+	
+}
